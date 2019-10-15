@@ -4,7 +4,7 @@
   "description": "My JavaScript algorithms library",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open",
+    "start": "webpack-dev-server --mode development --open",
     "test": "jest"
   },
   "keywords": [
