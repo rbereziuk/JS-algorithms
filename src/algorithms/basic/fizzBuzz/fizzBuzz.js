@@ -5,44 +5,42 @@
  * For numbers which are multiples of both three and five print “FizzBuzz”
  */
 
-function fizzBuzz(n) {
-  for (let i = 1; i <= n; i++) {
-    if (i % 15 === 0) {
-      console.log('FizzBuzz');
-    } else if (i % 5 === 0) {
-      console.log('Buzz');
-    } else if (i % 3 === 0) {
-      console.log('Fizz');
-    } else {
-      console.log(i);
-    }
+export function fizzBuzz(n) {
+  if (n % 15 === 0) {
+    return "FizzBuzz";
+  } else if (n % 5 === 0) {
+    return "Buzz";
+  } else if (n % 3 === 0) {
+    return "Fizz";
+  } else {
+    return n;
   }
 }
 
-function fizzBuzz2(n) {
+export function fizzBuzz2(n) {
   for (let i = 1; i <= n; i++) {
-    let str = '';
+    let str = "";
     if (i % 3 === 0) {
-      str += 'Fizz';
+      str += "Fizz";
     }
     if (i % 5 === 0) {
-      str += 'Buzz';
+      str += "Buzz";
     }
 
     console.log(str || i);
   }
 }
 
-function fizzBuzz3(n) {
+export function fizzBuzz3(n) {
   for (var i = 1; i <= n; i++) {
     var f = i % 3 == 0,
       b = i % 5 == 0;
-    console.log(f ? (b ? 'FizzBuzz' : 'Fizz') : b ? 'Buzz' : i);
+    console.log(f ? (b ? "FizzBuzz" : "Fizz") : b ? "Buzz" : i);
   }
 }
 
 // The shortest solution to FizzBuzz
-function fizzBuzz4(n) {
+export function fizzBuzz4(n) {
   for (let i = 0; i < n; )
-    console.log((++i % 3 ? '' : 'Fizz') + (i % 5 ? '' : 'Buzz') || i);
+    console.log((++i % 3 ? "" : "Fizz") + (i % 5 ? "" : "Buzz") || i);
 }

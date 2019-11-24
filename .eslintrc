@@ -1,6 +1,7 @@
 {
   "parserOptions": {
-    "ecmaVersion": 2020
+    "ecmaVersion": 2020,
+    "sourceType": "module"
   },
   "extends": [
     "eslint:recommended"
@@ -9,8 +10,9 @@
     "no-console": "off"
   },
   "env": {
+    "es6": true,
     "browser": true,
     "node": true,
-    "jest": true
+    "jest": true,
   }
 }
