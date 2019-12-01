@@ -1,9 +1,9 @@
-function isPalindrom(str) {
+export function isPalindrom(str) {
   const strReverse = str
     .toLowerCase()
-    .split('')
+    .split("")
     .reverse()
-    .join('');
+    .join("");
 
   if (str == strReverse) {
     return true;
@@ -12,17 +12,15 @@ function isPalindrom(str) {
   }
 }
 
-function isPalindrom2(string) {
+export function isPalindrom2(string) {
   string = string.toLowerCase();
-  var charactersArr = string.split('');
-  var validCharacters = 'abcdefghijklmnopqrstuvwxyz';
+  var charactersArr = string.split("");
+  var validCharacters = "abcdefghijklmnopqrstuvwxyz";
 
   var lettersArr = [];
   charactersArr.forEach(char => {
     if (validCharacters.indexOf(char) > -1) lettersArr.push(char);
   });
 
-  if (lettersArr.join('') == lettersArr.reverse().join('')) return true;
+  if (lettersArr.join("") == lettersArr.reverse().join("")) return true;
 }
-
-console.log(isPalindrom2("Madam I'm Adam"));

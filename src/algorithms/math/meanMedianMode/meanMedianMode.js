@@ -1,9 +1,9 @@
-function meanMedianMode(array) {
+export function meanMedianMode(array) {
   return {
     mean: getMean(array),
     median: getMedian(array),
     mode: getMode(array)
-  }
+  };
 }
 
 function getMean(array) {
@@ -18,11 +18,10 @@ function getMean(array) {
   return mean;
 }
 
-
 function getMedian(array) {
   array.sort(function(a, b) {
     return a - b;
-  })
+  });
 
   var median;
 
@@ -51,8 +50,7 @@ function getMode(array) {
   var maxFrequency = 0;
   var modes = [];
 
-
-  for(let num in modeObj) {
+  for (let num in modeObj) {
     if (modeObj[num] > maxFrequency) {
       modes = [num];
       maxFrequency = modeObj[num];
@@ -63,4 +61,3 @@ function getMode(array) {
 
   return modes;
 }
-
