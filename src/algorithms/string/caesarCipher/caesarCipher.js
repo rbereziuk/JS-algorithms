@@ -1,4 +1,4 @@
-function caesarCipher(string = '', n = 0) {
+export function caesarCipher(string = '', n = 0) {
   // For "big" n
   // Result 0 <= n <= 26 or -26 <= n <= 0
   n = n % 26;
@@ -35,5 +35,3 @@ function caesarCipher(string = '', n = 0) {
   }
   return newString;
 }
-var val = caesarCipher('JavaScript', -900);
-console.log(val);
