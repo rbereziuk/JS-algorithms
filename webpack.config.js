@@ -1,11 +1,11 @@
-var path = require("path");
+var path = require('path');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
 
   output: {
-    path: path.resolve(__dirname, "./dist"),
-    filename: "js/bundle.js"
+    path: path.resolve(__dirname, './dist'),
+    filename: 'js/bundle.js',
   },
 
   module: {
@@ -14,20 +14,18 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
-      }
-    ]
+          loader: 'babel-loader',
+        },
+      },
+    ],
   },
 
-  mode: "development",
+  mode: 'development',
 
-  watch: true,
-
-  devtool: "source-map",
+  devtool: 'source-map',
 
   devServer: {
-    overlay: true,
-    contentBase: path.join(__dirname, "dist")
-  }
+    contentBase: path.join(__dirname, 'dist'),
+    open: true,
+  },
 };
